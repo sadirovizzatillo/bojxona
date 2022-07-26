@@ -1,15 +1,13 @@
 <template>
   <div class="tabs mb-8">
     <v-card>
-      <v-toolbar class="h-full">
-        <div>
+      <v-toolbar class="h-full mb-8">
           <v-toolbar-title
-            >Божхона <br />
-            статистикаси
+          >Божхона <br />
+          статистикаси
+          <v-divider color="green"></v-divider>
             </v-toolbar-title
-          >
-          <v-divider></v-divider>
-        </div>
+            >
 
         <v-toolbar-title
         class="tab-title"
@@ -100,13 +98,17 @@ export default {
   white-space: initial !important;
 }
 .tabs .v-toolbar__title{
-  font-size: 28px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
     white-space: initial;
+    margin-right: auto;
+}
+.tab-title{
+  width: 650px;
 }
 .tabs .v-toolbar__content{
-  justify-content: space-between;
+  justify-content: space-between !important;
   height: 100px !important;
 }
 

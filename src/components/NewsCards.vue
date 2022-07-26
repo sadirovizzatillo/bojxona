@@ -8,7 +8,7 @@
         <v-btn rounded color="primary" dark> {{ item.title }} </v-btn>
       </v-app-bar>
 
-      <v-card-title class="white--text mt-8">
+      <v-card-title class="white--text mt-2">
         <p>{{ item.date }}</p>
         <p class="ml-3">
           {{ item.description }}
