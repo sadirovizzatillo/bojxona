@@ -51,26 +51,30 @@ import Parts from "./Parts.vue";
 import Footer from "./Footer.vue";
 import Accordion from "./Accordion.vue";
 import EssentialDates from "./EssentialDates.vue";
+import TranzitImage from "../assets/slider/transit.jpg";
+import LogisticsImage from "../assets/slider/logistics.jpg";
+import InfoSystemImage from "../assets/slider/infosystem.jpg";
+import PostImage from "../assets/slider/post.jpg";
 export default {
   name: "HelloWorld",
   data: () => ({
     items: [
       {
-        src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+        src: TranzitImage,
         title: "E-TRANZIT Божхона ахборот тизими",
         description: "Божхона ахборот тизими",
         smallTitle: "Чегарадан юкларни электрон декларация қилинг",
         btn: "Xizmatdan foydalanish",
       },
       {
-        src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+        src: PostImage,
         title: "ИНТЕГРАЦИЯЛАШГАН ТАЪРИФ",
         description: "Божхона ахборот тизими",
         smallTitle: "Божхона тўловлари ҳисобини олинг",
         btn: "Xizmatdan foydalanish",
       },
       {
-        src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+        src: InfoSystemImage,
         title: "ЯГОНА ДАРЧА",
         description: "Божхона ахборот тизими",
         smallTitle:
@@ -78,7 +82,7 @@ export default {
         btn: "Xizmatdan foydalanish",
       },
       {
-        src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+        src: LogisticsImage,
         title: "ИШГА КИРИШ УЧУН ОНЛАЙН АРИЗА БЕРИШ",
         description: "Божхона ахборот тизими",
         smallTitle:
