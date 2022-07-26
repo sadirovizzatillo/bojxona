@@ -1,58 +1,154 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <div>
+    <v-carousel hide-delimiters>
+      <v-carousel-item
+      class="carusel-item"
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      reverse-transition="fade-transition"
+      transition="fade-transition"
+      >
+
+      <v-card
+      class="v-sheet--outlined"
+      max-width="344"
+      color="transparent"
+
+      >
+      <v-card-text>
+        <p class="text-h4 white--text">
+          {{item.title}}
+        </p>
+        <p class="white--text">{{ item.description }}</p>
+        <div class="white--text">
+          {{item.smallTitle}}
+        </div>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn
+        class="ma-2"
+        color="success"
+        v-if="item.btn"
+      >
+      {{ item.btn }}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-carousel-item>
+</v-carousel>
+
+<Parts/>
+
+<Tabs/>
+<div class="d-flex flex-wrap justify-sm-space-around">
+  <NewsCards v-for="(item, id) in newsCard"  :key="id" :item="item"/>
+</div>
+
+
+</div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+import Tabs from './Tabs.vue';
+import NewsCards from "../components/NewsCards.vue"
+import Parts from './Parts.vue';
+  export default {
+    name: "HelloWorld",
+    data: () => ({
+        items: [
+            {
+                src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+                title: "E-TRANZIT Божхона ахборот тизими",
+                description: "Божхона ахборот тизими",
+                smallTitle: "Чегарадан юкларни электрон декларация қилинг",
+                btn: "Xizmatdan foydalanish"
+            },
+            {
+                src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+                title: "ИНТЕГРАЦИЯЛАШГАН ТАЪРИФ",
+                description: "Божхона ахборот тизими",
+                smallTitle: "Божхона тўловлари ҳисобини олинг",
+                btn: "Xizmatdan foydalanish"
+            },
+            {
+                src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+                title: "ЯГОНА ДАРЧА",
+                description: "Божхона ахборот тизими",
+                smallTitle: "Чегарадан товарлар олиб ўтишда сертификат ва рухсатномаларни ушбу ахборот тизими ёрдамида олинг",
+                btn: "Xizmatdan foydalanish"
+            },
+            {
+                src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+                title: "ИШГА КИРИШ УЧУН ОНЛАЙН АРИЗА БЕРИШ",
+                description: "Божхона ахборот тизими",
+                smallTitle: "Божхона хизмати органларидаги вакансиялар рўйхатини билиб олинг ҳамда ишга кириш учун онлайн ариза юборинг",
+            },
+            {
+                src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+                title: "ШАФФОФЛИК ЗАМИРИДА ИҚТИСОДИЙ ХАВФСИЗЛИК",
+            },
+            {
+                src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+                title: "E-ARHIV",
+                description: "Божхона ахборот тизими",
+                smallTitle: "Божхона ахборот тизмиларига ҳужжатларингизни жойланг",
+                btn: "Xizmatdan foydalanish"
+            },
+        ],
+        newsCard:[
+        {
+          id:1,
+          title:"Коррупцияга қарши кураш",
+          img:"https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+          description:"Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
+          date:"26.07.2022"
+        },
+        {
+          id:2,
+          title:"Коррупцияга қарши кураш",
+          img:"https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+          description:"Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
+          date:"26.07.2022"
+        },
+        {
+          id:3,
+          title:"Коррупцияга қарши кураш",
+          img:"https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+          description:"Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
+          date:"26.07.2022"
+        },
+        {
+          id:4,
+          title:"Коррупцияга қарши кураш",
+          img:"https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+          description:"Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
+          date:"26.07.2022"
+        },
+        {
+          id:5,
+          title:"Коррупцияга қарши кураш",
+          img:"https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+          description:"Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
+          date:"26.07.2022"
+        },
+        {
+          id:6,
+          title:"Коррупцияга қарши кураш",
+          img:"https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+          description:"Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
+          date:"26.07.2022"
+        },
+      ]
+    }),
+    components: { Tabs, Parts, NewsCards }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
+  .carusel-item .v-responsive__content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 </style>
