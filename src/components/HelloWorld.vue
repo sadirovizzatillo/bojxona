@@ -28,19 +28,21 @@
       </v-carousel-item>
     </v-carousel>
 
-    <Parts />
+    <div class="container">
+      <Parts />
 
-    <Tabs />
-    <div class="d-flex flex-wrap justify-sm-space-around">
-      <NewsCards v-for="(item, id) in newsCard" :key="id" :item="item" />
+      <Tabs />
+      <div class="d-flex flex-wrap card-list">
+        <NewsCards v-for="(item, id) in newsCard" :key="id" :item="item" />
+      </div>
+
+      <div class="container" style="display: flex">
+        <Accordion />
+        <EssentialDates />
+      </div>
+
+      <Footer />
     </div>
-
-    <div class="container" style="display: flex">
-      <Accordion />
-      <EssentialDates />
-    </div>
-
-    <Footer />
   </div>
 </template>
 
@@ -154,5 +156,10 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+@media screen and (max-width: 550px) {
+  .card-list {
+    justify-content: center;
+  }
 }
 </style>
