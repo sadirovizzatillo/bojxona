@@ -106,8 +106,9 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             d="M4 6h16M4 12h16M4 18h16"
-          /></svg
-      ></v-app-bar-nav-icon>
+          />
+        </svg>
+      </v-app-bar-nav-icon>
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
@@ -118,14 +119,14 @@
         <router-view></router-view>
       </v-container>
 
-      <ul>
+      <!-- <ul>
         <li>
           <a href="#part">part</a>
           <a href="#slider">part</a>
           <a href="#tab">part</a>
           <a href="#card">part</a>
         </li>
-      </ul>
+      </ul> -->
     </v-main>
 
     <v-footer class="footer" app>
