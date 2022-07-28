@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tab-form">
     <div class="tab-title">Божхонага доир муҳим саналар</div>
     <TabNav
       class="first-tab"
@@ -13,26 +13,28 @@
         :key="index"
         :isSelected="selected === `${firstM.title}`"
       >
-        <div v-for="(item, idx) in firstM.content" :key="idx">
-          <ul>
-            <li>
-              <div class="month">
-                <div>
-                  <img
-                    class="calendar"
-                    src="../assets/calendar (1).png"
-                    alt=""
-                  />
+        <div class="middle">
+          <div v-for="(item, idx) in firstM.content" :key="idx">
+            <ul>
+              <li>
+                <div class="month">
+                  <div>
+                    <img
+                      class="calendar"
+                      src="../assets/calendar (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <span>{{ item.number }}</span>
+                  </div>
                 </div>
                 <div>
-                  <span>{{ item.number }}</span>
+                  <p class="item-title">{{ item.title }}</p>
                 </div>
-              </div>
-              <div>
-                <p class="item-title">{{ item.title }}</p>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </Tab>
     </TabNav>
@@ -48,26 +50,28 @@
         :key="n"
         :isSelected="selected === `${secondM.title}`"
       >
-        <div v-for="(item, t) in secondM.content" :key="t">
-          <ul>
-            <li>
-              <div class="month">
-                <div>
-                  <img
-                    class="calendar"
-                    src="../assets/calendar (1).png"
-                    alt=""
-                  />
+        <div class="middle">
+          <div v-for="(item, t) in secondM.content" :key="t">
+            <ul>
+              <li>
+                <div class="month">
+                  <div>
+                    <img
+                      class="calendar"
+                      src="../assets/calendar (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <span>{{ item.number }}</span>
+                  </div>
                 </div>
                 <div>
-                  <span>{{ item.number }}</span>
+                  <p class="item-title">{{ item.title }}</p>
                 </div>
-              </div>
-              <div>
-                <p class="item-title">{{ item.title }}</p>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </Tab>
       <Tab />
@@ -80,7 +84,6 @@
 import TabNav from "../components/EssentialDatesItem.vue";
 import Tab from "../components/EssentialDate.vue";
 export default {
-  name: "EssentialDates",
   components: {
     TabNav,
     Tab,
@@ -300,16 +303,21 @@ export default {
 </script>
 
 <style>
+.tab-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .test {
-  width: 700px;
-  height: 250px;
+  min-height: 250px;
 }
 .second-tab {
   display: flex;
   flex-direction: column-reverse;
 }
-.first-tab {
-  width: 100%;
+.total .oylar {
+  max-width: 572px;
+  margin: 0 auto;
 }
 .tab-title {
   color: #313c45;
@@ -321,6 +329,9 @@ export default {
   width: 30px;
   height: 30px;
   color: #fff;
+}
+ul {
+  flex-wrap: nowrap;
 }
 ul li {
   list-style-type: none;
@@ -345,5 +356,19 @@ ul li {
   font-size: 16px;
   font-weight: 500;
   color: #000;
+}
+@media screen and (max-width: 960px) {
+  .tab-form {
+    max-width: 600px;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 590px) {
+  .total .oylar {
+    max-width: 302px;
+  }
+  .tab-form {
+    display: none;
+  }
 }
 </style>

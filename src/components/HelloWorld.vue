@@ -36,7 +36,7 @@
         <NewsCards v-for="(item, id) in newsCard" :key="id" :item="item" />
       </div>
 
-      <div class="container" style="display: flex">
+      <div class="container two-comp">
         <Accordion />
         <EssentialDates />
       </div>
@@ -152,11 +152,32 @@ export default {
 </script>
 
 <style>
+.two-comp {
+  width: 100%;
+  display: flex;
+}
+
 .carusel-item .v-responsive__content {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
+@media (max-width: 960px) {
+  .two-comp {
+    flex-direction: column;
+  }
+  .two-comp > * {
+    width: 100%;
+  }
+}
+
+@media (max-width: 792px) {
+  .card-list {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .card-list {
     justify-content: center;
