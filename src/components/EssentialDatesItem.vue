@@ -2,12 +2,13 @@
   <div class="total">
     <div class="total-middle">
       <ul class="oylar">
-        <li v-for="tab in tabs" :key="tab" class="nav-item">
-          <a
-            class="nav-link"
-            :class="{ active: tab === selected }"
-            @click="setTab(tab)"
-          >
+        <li
+          v-for="tab in tabs"
+          :key="tab"
+          class="nav-item"
+          :class="{ active: tab === selected }"
+        >
+          <a class="nav-link" @click="setTab(tab)">
             {{ tab }}
           </a>
         </li>
@@ -49,8 +50,17 @@ export default {
   transform: skew(20deg);
   margin-left: 10px;
 }
-.nav-item:active {
+.nav-link {
+  text-decoration: none;
+  color: #000 !important;
+}
+.active {
   background-color: #39ae69;
+  color: white;
+}
+
+.active .nav-link {
+  color: white !important;
 }
 .selected {
   background-color: #39ae69;
@@ -59,6 +69,9 @@ export default {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(6, 1fr);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 590px) {

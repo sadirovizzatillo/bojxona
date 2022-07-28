@@ -83,7 +83,7 @@ export default {
 
 <style>
 .Partnor {
-  width: 50%;
+  margin-right: 30px;
 }
 .expansion-title {
   color: #39ae69 !important;

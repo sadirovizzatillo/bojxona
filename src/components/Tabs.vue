@@ -96,6 +96,7 @@ export default {
   font-weight: 700;
   line-height: 1.2;
   white-space: initial;
+  color: #39ae69;
 }
 .v-window-item {
   height: 420px;

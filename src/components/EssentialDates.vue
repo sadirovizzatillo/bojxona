@@ -90,7 +90,7 @@ export default {
   },
   data() {
     return {
-      selected: "Home",
+      selected: "январ",
       firstMonth: [
         {
           title: "январ",
@@ -307,6 +307,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 500px;
 }
 .test {
   min-height: 250px;
@@ -320,7 +321,7 @@ export default {
   margin: 0 auto;
 }
 .tab-title {
-  color: #313c45;
+  color: #39ae69;
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 30px;

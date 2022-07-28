@@ -163,6 +163,12 @@ export default {
   align-items: center;
 }
 
+@media screen and (max-width: 1270px) {
+  .card-list {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 960px) {
   .two-comp {
     flex-direction: column;
