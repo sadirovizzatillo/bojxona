@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-carousel hide-delimiters>
+    <v-carousel hide-delimiters cycle show-arrows-on-hover>
       <v-carousel-item
         class="carusel-item"
         v-for="(item, i) in items"
         :key="i"
         :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
+        reverse-transition="scale-transition"
+        transition="scale-transition"
       >
         <v-card class="v-sheet--outlined" max-width="344" color="transparent">
           <v-card-text>
