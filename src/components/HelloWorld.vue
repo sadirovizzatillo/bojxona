@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-carousel hide-delimiters cycle show-arrows-on-hover>
+    <v-carousel id="slider" hide-delimiters cycle show-arrows-on-hover>
       <v-carousel-item
         class="carusel-item"
         v-for="(item, i) in items"
@@ -28,15 +28,45 @@
       </v-carousel-item>
     </v-carousel>
 
-    <div class="container">
-      <Parts />
+    <ul>
+      <li>
+        <a href="#part">part</a>
+        <a href="#slider">part</a>
+        <a href="#tab">part</a>
+        <a href="#card">part</a>
+      </li>
+    </ul>
 
-      <Tabs />
-      <div class="d-flex flex-wrap card-list">
+    <div class="container">
+      <Parts
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-delay="500"
+      />
+
+      <Tabs
+        id="tab"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-delay="500"
+      />
+      <div
+        id="card"
+        class="d-flex flex-wrap card-list"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-delay="500"
+      >
         <NewsCards v-for="(item, id) in newsCard" :key="id" :item="item" />
       </div>
 
-      <div class="container two-comp">
+      <div
+        class="container two-comp"
+        id="part"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-delay="500"
+      >
         <Accordion />
         <EssentialDates />
       </div>
@@ -57,6 +87,7 @@ import TranzitImage from "../assets/slider/transit.jpg";
 import LogisticsImage from "../assets/slider/logistics.jpg";
 import InfoSystemImage from "../assets/slider/infosystem.jpg";
 import PostImage from "../assets/slider/post.jpg";
+
 export default {
   name: "HelloWorld",
   data: () => ({

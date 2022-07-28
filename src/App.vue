@@ -117,6 +117,15 @@
         <!-- If using vue-router -->
         <router-view></router-view>
       </v-container>
+
+      <ul>
+        <li>
+          <a href="#part">part</a>
+          <a href="#slider">part</a>
+          <a href="#tab">part</a>
+          <a href="#card">part</a>
+        </li>
+      </ul>
     </v-main>
 
     <v-footer class="footer" app>
