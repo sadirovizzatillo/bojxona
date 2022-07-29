@@ -87,6 +87,12 @@ import TranzitImage from "../assets/slider/transit.jpg";
 import LogisticsImage from "../assets/slider/logistics.jpg";
 import InfoSystemImage from "../assets/slider/infosystem.jpg";
 import PostImage from "../assets/slider/post.jpg";
+import CardFirst from "../assets/card/1.jpg";
+import CardSecond from "../assets/card/2.jpg";
+import CardThird from "../assets/card/3.jpg";
+import CardFourth from "../assets/card/4.jpg";
+import CardFifth from "../assets/card/5.jpg";
+import CardSix from "../assets/card/6.jpg";
 
 export default {
   name: "HelloWorld",
@@ -137,42 +143,42 @@ export default {
       {
         id: 1,
         title: "Коррупцияга қарши кураш",
-        img: "https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+        img: CardFirst,
         description: "Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
         date: "26.07.2022",
       },
       {
         id: 2,
         title: "Коррупцияга қарши кураш",
-        img: "https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+        img: CardSecond,
         description: "Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
         date: "26.07.2022",
       },
       {
         id: 3,
         title: "Коррупцияга қарши кураш",
-        img: "https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+        img: CardThird,
         description: "Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
         date: "26.07.2022",
       },
       {
         id: 4,
         title: "Коррупцияга қарши кураш",
-        img: "https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+        img: CardFourth,
         description: "Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
         date: "26.07.2022",
       },
       {
         id: 5,
         title: "Коррупцияга қарши кураш",
-        img: "https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+        img: CardFifth,
         description: "Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
         date: "26.07.2022",
       },
       {
         id: 6,
         title: "Коррупцияга қарши кураш",
-        img: "https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg",
+        img: CardSix,
         description: "Божхона тизими коррупциядан ҳоли тизимга айланади  ...",
         date: "26.07.2022",
       },

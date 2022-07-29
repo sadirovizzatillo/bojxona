@@ -120,12 +120,14 @@ router-link {
 .box3 ul li {
   padding-top: 6px;
 }
+.box3 ul li a {
+  color: #000 !important;
+}
 router-link:hover {
   color: #39ae69;
 }
 footer {
   display: flex;
-  padding: 40px 65px;
   width: 100%;
 }
 .box1 {

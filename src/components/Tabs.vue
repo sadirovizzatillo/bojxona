@@ -100,7 +100,6 @@ export default {
 }
 .v-window-item {
   height: 420px;
-  max-width: 600px;
 }
 .tab-title {
   width: 650px;
@@ -110,6 +109,12 @@ export default {
 .tabs .v-toolbar__content {
   justify-content: space-between !important;
   height: 100px !important;
+}
+
+@media screen and (max-width: 1270px) {
+  .v-window-item {
+    max-width: 600px;
+  }
 }
 
 @media screen and (max-width: 1050px) {

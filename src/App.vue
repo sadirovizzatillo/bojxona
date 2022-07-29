@@ -181,6 +181,7 @@
                 <v-list-item-group>
                   <v-list-item v-for="(item, id) in footerList" :key="id">
                     <v-list-item-content>
+                      <img class="footer-img" :src="item.img" />
                       <v-list-item-title
                         v-text="item.title"
                         max-width="100"
@@ -198,6 +199,10 @@
 </template>
 
 <script>
+import Prokratura from "./assets/footer/prokuratura.png";
+import Gerb from "./assets/footer/gerb.png";
+import IIV from "./assets/footer/iiv.png";
+import Logo from "./assets/footer/logo.png";
 export default {
   name: "App",
 
@@ -228,32 +233,37 @@ export default {
       {
         id: 1,
         title: "O'zbekiston Respublikasi Milliy huquqiy internet portali",
-        img: "s",
+        img: Prokratura,
       },
       {
         id: 2,
         title: "O'zbekiston Respublikasi Prezidentining rasmiy veb sayti",
-        img: "s",
+        img: Gerb,
       },
       {
         id: 3,
         title: "O'zbekiston Respublikasi Hukumat portali",
-        img: "s",
+        img: IIV,
       },
       {
         id: 4,
         title: "O'zbekiston Respublikasi Bosh prokuraturasi",
-        img: "s",
+        img: Logo,
       },
       {
         id: 5,
         title: "O'zbekiston Respublikasi Ichki ishlar vazirligi",
-        img: "s",
+        img: IIV,
       },
       {
         id: 6,
         title: "O'zbekiston Respublikasi Davlat soliq qo'mitasi",
-        img: "s",
+        img: Gerb,
+      },
+      {
+        id: 7,
+        title: "O'zbekiston Respublikasi Ichki ishlar vazirligi",
+        img: IIV,
       },
     ],
     tiles: [
@@ -282,6 +292,9 @@ export default {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
+}
+.v-application a {
+  color: #000 !important;
 }
 .v-application .title,
 .subheading,
@@ -324,16 +337,21 @@ export default {
   width: 170px;
   justify-content: center;
 }
+.footer-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 .footer-card .v-item-group {
   display: flex;
 }
 .footer-card .v-list-item__content {
   max-width: 100px;
   font-weight: 500;
-  font-size: 12px;
 }
 .footer-card .v-list-item__title,
 .v-list-item__subtitle {
   white-space: initial;
+  font-size: 12px;
 }
 </style>

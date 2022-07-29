@@ -1,5 +1,5 @@
 <template>
-  <v-card width="380" class="mr-3 mb-4 mr-xs-0">
+  <v-card width="380" class="card-new mr-3 mb-4 mr-xs-0">
     <v-img height="200px" :src="item.img">
       <v-app-bar flat color="rgba(0, 0, 0, 0)">
         <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
@@ -30,4 +30,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-new {
+  transition: transform 0.2s;
+}
+.card-new:hover {
+  transform: scale(0.9, 0.9);
+}
+</style>
