@@ -28,14 +28,14 @@
       </v-carousel-item>
     </v-carousel>
 
-    <ul>
+    <!-- <ul>
       <li>
         <a href="#part">part</a>
         <a href="#slider">part</a>
         <a href="#tab">part</a>
         <a href="#card">part</a>
       </li>
-    </ul>
+    </ul> -->
 
     <div class="container">
       <Parts
